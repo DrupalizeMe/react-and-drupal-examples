@@ -35,7 +35,7 @@ npm run start
 npm run start:hmr
 ```
 
-## Decouple React Application
+## Decoupled React Application
 
 The _/react-decoupled_ directory contains an example decoupled React application built with create-react-app. It is built to interact with the API provided by Drupal 8 installed in _/drupal_.
 
