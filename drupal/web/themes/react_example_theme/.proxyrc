@@ -1,0 +1,7 @@
+{
+  "**": {
+    "target": "http://react-tutorials-2.ddev.site",
+    "changeOrigin": true,
+    "xfwd": true
+  }
+}

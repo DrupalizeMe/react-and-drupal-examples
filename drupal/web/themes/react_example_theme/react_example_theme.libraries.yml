@@ -1,0 +1,33 @@
+# Include React app assets compiled by a JavaScript toolchain.
+react_app:
+  version: VERSION
+  js:
+    js/dist/main.min.js: {minified: true}
+
+# Include development mode React app assets compiled by a JavaScript toolchain.
+# @see react_example_theme_page_attachments_alter() in
+# react_example_theme.theme.
+react_app_dev:
+  version: VERSION
+  js:
+    js/dist_dev/main.min.js: {minified: true}
+
+# Include the React, ReactDOM, and Babel runtime scripts from a CDN.
+# Use this if you're not using a toolchain to bundle your custom JS code. The
+# best way is to include this as a dependency of another library.
+react_external:
+  version: 16.x
+  header: true
+  js:
+    https://unpkg.com/react@16/umd/react.production.min.js: { external: true, minified: true }
+    https://unpkg.com/react-dom@16/umd/react-dom.production.min.js: { external: true, minified: true }
+    https://unpkg.com/babel-standalone@6/babel.min.js: { external: true, minified: true }
+
+# Include a React/JavaScript application without using a JavaScript toolchain.
+react_app_simple:
+  version: VERSION
+  footer: true
+  js:
+    js/index.js: { attributes: { type: text/babel } }
+  dependencies:
+    - react_example_theme/react_external

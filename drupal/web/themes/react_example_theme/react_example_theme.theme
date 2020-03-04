@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * Implements hook_page_attachments_alter().
+ *
+ * This is taken from the awesome setup by Sam Mortenson:
+ * @link https://thinkshout.com/blog/2019/10/adding-webpack-to-a-traditional-drupal-theme/
+ */
+function react_example_theme_page_attachments_alter(array &$attachments) {
+  // Use the dev library if we're developing locally.
+  if (in_array('react_example_theme/react_app', $attachments['#attached']['library']) && file_exists(__DIR__ . '/js/dist_dev')) {
+    $index = array_search('react_example_theme/react_app', $attachments['#attached']['library']);
+    $attachments['#attached']['library'][$index] = 'react_example_theme/react_app_dev';
+  }
+}

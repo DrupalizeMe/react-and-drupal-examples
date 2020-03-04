@@ -1,0 +1,8 @@
+name: React Example Theme
+type: theme
+description: 'A theme that loads React JavaScript libraries, and a basic React application.'
+core: 8.x
+base theme: bartik
+
+libraries:
+  - react_example_theme/react_app
