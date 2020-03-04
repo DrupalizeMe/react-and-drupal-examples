@@ -1,0 +1,22 @@
+uuid: b275f4e7-e5f2-41c7-b1f2-0feb2f2b4c2b
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - react_example_theme
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: react_example_theme_content
+theme: react_example_theme
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

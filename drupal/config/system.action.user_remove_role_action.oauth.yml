@@ -1,0 +1,14 @@
+uuid: d75988ac-82c9-4f57-a70f-1b84c99be623
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.oauth
+  module:
+    - user
+id: user_remove_role_action.oauth
+label: 'Remove the OAUTH role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: oauth

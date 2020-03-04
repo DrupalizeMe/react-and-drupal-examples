@@ -1,0 +1,22 @@
+uuid: 44556f80-8a26-4a95-be89-a6326271fb21
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - react_example_theme
+_core:
+  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+id: react_example_theme_breadcrumbs
+theme: react_example_theme
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }

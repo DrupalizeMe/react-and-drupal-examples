@@ -1,0 +1,15 @@
+uuid: 0a102ad7-d88c-4a6c-b550-46db4187a7b6
+langcode: en
+status: true
+dependencies: {  }
+id: oauth
+label: OAUTH
+weight: 3
+is_admin: null
+permissions:
+  - 'access content overview'
+  - 'create article content'
+  - 'debug simple_oauth tokens'
+  - 'delete any article content'
+  - 'edit any article content'
+  - 'view own unpublished content'
