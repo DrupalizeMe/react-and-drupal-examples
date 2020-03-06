@@ -9,14 +9,26 @@ The /drupal directory contains a Drupal 8 project with basic configuration for J
 Install all the Drupal dependencies:
 
 ```bash
-cd /drupal
+cd drupal
 composer install
 ```
 
-If you're using ddev this contains ddev configuration and can be started with:
+Then import the database snapshot in _drupal/backup.sql.gz_.
+
+The default admin account is admin/admin. You can change this with `drush upwd admin {NEW_PASSWORD}`.
+
+If you're using [ddev](https://ddev.readthedocs.io/en/stable/) this contains ddev configuration and can be started with:
 
 ```bash
+cd drupal
+# Start ddev.
 ddev start
+# Install/update composer dependencies.
+ddev composer install
+# Import the database snapshot.
+ddev import-db --src=./backup.sql.gz
+# Run any necessary database updates, and re-import config.
+ddev exec "drush updb -y && drush cim -y && drush cr -y"
 ```
 
 The _/drupal/web/themes/react\_example\_theme/_ contains a custom theme with a React application embedded via the theme. This demonstrates using Webpack to bundle and transpile React/JavaScript files.

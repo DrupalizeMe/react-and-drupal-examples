@@ -6,7 +6,7 @@ php_version: "7.3"
 webserver_type: nginx-fpm
 router_http_port: "80"
 router_https_port: "443"
-xdebug_enabled: true
+xdebug_enabled: false
 additional_hostnames: []
 additional_fqdns: []
 nfs_mount_enabled: false
