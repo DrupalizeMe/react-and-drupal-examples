@@ -6,7 +6,7 @@
 /drupal/keys/public.key
 
 # Ignore configuration files that may contain sensitive information
-/drupal/web/sites/*/*settings*.php
+/drupal/web/sites/*/*settings.*.php
 /drupal/web/sites/*/*services*.yml
 
 # Ignore paths that may contain user-generated content
