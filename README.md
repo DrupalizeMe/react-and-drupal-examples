@@ -2,6 +2,8 @@
 
 This repo contains the example code used in the https://drupalize.me/series/drupal-8-and-reactjs series.
 
+**Note:** The `hello-world` branch contains a trimmed down version of the code that reflects the application as it would be after completing this tutorial covering how to [Connect React to a Drupal Theme or Module](https://drupalize.me/tutorial/connect-react-drupal-theme-or-module?p=3253).
+
 ## Drupal 8
 
 The /drupal directory contains a Drupal 8 project with basic configuration for JSON:API, and to demonstrate embedding a React application inside a Drupal theme or module.
