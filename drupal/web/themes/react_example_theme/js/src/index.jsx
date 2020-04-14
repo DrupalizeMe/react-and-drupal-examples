@@ -1,24 +1,12 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import { hot } from 'react-hot-loader/root';
+/**
+ * Leave these commented out if you're NOT using a build toolchain. Uncomment
+ * them if you configure Webpack below.
+ */
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-/* Import Components */
-import DrupalProjectStats from './components/DrupalProjectStats';
-import NodeListOnly from "./components/NodeListOnly";
-import NodeReadWrite from "./components/NodeReadWrite";
-
-const Main = hot(() => (
-  <>
-    {
-      //<DrupalProjectStats projectName="drupal" />
-    }
-    {
-      //<NodeListOnly />
-    }
-    {
-      <NodeReadWrite/>
-    }
-  </>
-));
-
-ReactDOM.render(<Main/>, document.getElementById('react-app'));
+// # Example 1: Simple "Hello, World" code
+ReactDOM.render(
+  <h1>Hello there - world!</h1>,
+  document.getElementById('react-app')
+);

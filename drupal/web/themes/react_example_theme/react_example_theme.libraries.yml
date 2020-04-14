@@ -12,6 +12,10 @@ react_app_dev:
   js:
     js/dist_dev/main.min.js: {minified: true}
 
+# ------------------------------------------------------------------------------
+# Alternative method; Include React via CDN
+# ------------------------------------------------------------------------------
+
 # Include the React, ReactDOM, and Babel runtime scripts from a CDN.
 # Use this if you're not using a toolchain to bundle your custom JS code. The
 # best way is to include this as a dependency of another library.

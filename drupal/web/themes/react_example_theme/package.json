@@ -6,8 +6,7 @@
   "scripts": {
     "build": "NODE_ENV=production webpack --mode=production",
     "build:dev": "webpack",
-    "start": "webpack --watch",
-    "start:hmr": "webpack-dev-server --hot"
+    "start": "webpack --watch"
   },
   "keywords": [],
   "author": "",
@@ -18,9 +17,7 @@
     "@babel/preset-react": "^7.8.3",
     "babel-loader": "^8.0.6",
     "webpack": "^4.41.6",
-    "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3",
-    "write-file-webpack-plugin": "^4.5.1"
+    "webpack-cli": "^3.3.11"
   },
   "dependencies": {
     "react": "^16.12.0",
