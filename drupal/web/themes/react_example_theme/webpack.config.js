@@ -1,6 +1,4 @@
 const path = require('path');
-const WriteFilePlugin = require('write-file-webpack-plugin');
-
 const isDevMode = process.env.NODE_ENV !== 'production';
 
 const PROXY = 'https://react-tutorials-2.ddev.site/';
@@ -22,6 +20,9 @@ const config = {
   },
   resolve: {
     extensions: ['.js', '.jsx'],
+    alias: {
+      'react-dom': '@hot-loader/react-dom',
+    },
   },
   module: {
     rules: [
@@ -40,17 +41,13 @@ const config = {
       }
     ],
   },
-  plugins: [
-    new WriteFilePlugin({
-      force: true,
-      test: /^(?!.*(hot)).*/,
-    })
-  ],
   devServer: {
     port: 8181,
     hot: true,
     https: true,
+    writeToDisk: true,
     headers: { 'Access-Control-Allow-Origin': '*' },
+    // Settings for http-proxy-middleware.
     proxy: {
       '/': {
         index: '',
@@ -58,6 +55,9 @@ const config = {
         target: PROXY,
         publicPath: PUBLIC_PATH,
         secure: false,
+        // These settings allow Drupal authentication to work, so you can sign
+        // in to your Drupal site via the proxy. They require some corresponding
+        // configuration in Drupal's settings.php.
         changeOrigin: true,
         xfwd: true
       }
