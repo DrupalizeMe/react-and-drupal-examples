@@ -41,7 +41,7 @@ const LoginForm = () => {
       .catch((error) => {
         setSubmitting(false);
         setLoggedIn(false);
-        setResult({ error: true, message: 'Login error' });
+        setResult({ error: true, message: `Login error: ${error.message}` });
         console.log('Login error', error);
       });
   };

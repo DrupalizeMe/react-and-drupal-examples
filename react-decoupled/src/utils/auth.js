@@ -61,12 +61,13 @@ export function getAuthClient(config = {}) {
       const data = await response.json();
       if (data.error) {
         console.log('Error retrieving token', data);
-        return false;
+        return Promise.reject(new Error(`Error retrieving OAuth token: ${data.error}`));
       }
       return saveToken(data);
     }
     catch (err) {
-      return console.log('API got an error', err);
+      console.log('API got an error', err);
+      return Promise.reject(new Error(`API error: ${err}`));
     }
   };
 
