@@ -96,8 +96,9 @@ export function getAuthClient(config = {}) {
         console.log('using token', oauth_token);
         options.headers.append('Authorization', `Bearer ${oauth_token.access_token}`);
       }
-      return fetch(`${config.base}${url}`, options);
     }
+
+    return fetch(`${config.base}${url}`, options);
   }
 
   /**
