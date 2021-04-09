@@ -11,15 +11,16 @@
  *   Options to pass to fetch for the call to fetchUrl.
  */
 export const fetchWithCSRFToken = (csrfUrl, fetchUrl, fetchOptions) => {
+
   if (!fetchOptions.headers.get('X-CSRF-Token')) {
-    return fetch(csrfUrl)
+    return fetch(`${drupalSettings.path.baseUrl}${csrfUrl}`)
       .then(response => response.text())
       .then((csrfToken) => {
         fetchOptions.headers.append('X-CSRF-Token', csrfToken);
-        return fetch(fetchUrl, fetchOptions);
+        return fetch(`${drupalSettings.path.baseUrl}${fetchUrl}`, fetchOptions);
       });
   }
   else {
-    return fetch(fetchUrl, fetchOptions);
+    return fetch(`${drupalSettings.path.baseUrl}${fetchUrl}`, fetchOptions);
   }
 };
