@@ -45,8 +45,10 @@ const config = {
     port: 8181,
     hot: true,
     https: true,
-    writeToDisk: true,
     headers: { 'Access-Control-Allow-Origin': '*' },
+    devMiddleware: {
+      writeToDisk: true,
+    },
     // Settings for http-proxy-middleware.
     proxy: {
       '/': {
