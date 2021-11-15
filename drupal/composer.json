@@ -16,10 +16,10 @@
     ],
     "require": {
         "composer/installers": "^1.2",
-        "drupal/core-composer-scaffold": "^8.8",
+        "drupal/core-composer-scaffold": "~9.0",
         "drupal/core-project-message": "^8.8",
-        "drupal/core-recommended": "^8.8",
-        "drupal/devel": "^2.1",
+        "drupal/core-recommended": "~9.0",
+        "drupal/devel": "^4.1",
         "drupal/simple_oauth": "^4.4"
     },
     "require-dev": {

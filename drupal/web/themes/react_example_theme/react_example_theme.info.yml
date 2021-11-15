@@ -1,7 +1,6 @@
 name: React Example Theme
 type: theme
 description: 'A theme that loads React JavaScript libraries, and a basic React application.'
-core: 8.x
 core_version_requirement: ^8.7.7 || ^9
 base theme: bartik
 
