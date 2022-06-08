@@ -136,7 +136,7 @@ export function getAuthClient(config = {}) {
    *
    * This function is smart about reusing requests for a refresh token. So it is
    * safe to call it multiple times in succession without having to worry about
-   * wether a previous request is still processing.
+   * whether a previous request is still processing.
    */
   function refreshToken(refresh_token) {
     console.log("getting refresh token");
