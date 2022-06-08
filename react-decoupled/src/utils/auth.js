@@ -91,10 +91,15 @@ export function getAuthClient(config = {}) {
    */
   async function fetchWithAuthentication(url, options) {
     if (!options.headers.get('Authorization')) {
-      const oauth_token = await token();
-      if (oauth_token) {
-        console.log('using token', oauth_token);
-        options.headers.append('Authorization', `Bearer ${oauth_token.access_token}`);
+      try {
+        const oauth_token = await token();
+        if (oauth_token) {
+          console.log('using token', oauth_token);
+          options.headers.append('Authorization', `Bearer ${oauth_token.access_token}`);
+        }
+      } catch (error) {
+        // Safe to swallow this error. Just means we don't have a logged in
+        // user.
       }
     }
 
@@ -116,7 +121,7 @@ export function getAuthClient(config = {}) {
       : false;
 
     if (!token) {
-      Promise.reject();
+      return Promise.reject('empty token');
     }
 
     const { expires_at, refresh_token } = token;
@@ -196,10 +201,15 @@ export function getAuthClient(config = {}) {
    * @returns {Promise}
    */
   async function isLoggedIn() {
-    const oauth_token = await token();
-    if (oauth_token) {
-      return Promise.resolve(true);
+    try {
+      const oauth_token = await token();
+      if (oauth_token) {
+        return Promise.resolve(true);
+      }
+    } catch (error) {
+      return Promise.reject(error);;
     }
+
     return Promise.reject(false);;
   };
 

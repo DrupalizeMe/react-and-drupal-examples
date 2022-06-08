@@ -20,7 +20,9 @@ const LoginForm = () => {
   useEffect(() => {
     auth.isLoggedIn().then((res) => {
       setLoggedIn(true);
-    })
+    }).catch((error) => {
+      setLoggedIn(false);
+    });
   }, []);
 
   const handleInputChange = (event) => {

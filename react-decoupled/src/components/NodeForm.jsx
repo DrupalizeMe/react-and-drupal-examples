@@ -90,6 +90,10 @@ const NodeForm = ({id, title, body, onSuccess}) => {
               onSuccess(data.data);
             }
           }
+        })
+        .catch((error) => {
+          console.log('Error while contacting API', error);
+          setSubmitting(false);    
         });
     } catch (error) {
       console.log('Error while contacting API', error);
