@@ -1,4 +1,5 @@
 const path = require('path');
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 const isDevMode = process.env.NODE_ENV !== 'production';
 
 const PROXY = 'https://react-tutorials-2.ddev.site/';
@@ -7,7 +8,6 @@ const PUBLIC_PATH = '/themes/react_example_theme/js/dist_dev/';
 const config = {
   entry: {
     main: [
-      "react-hot-loader/patch",
       "./js/src/index.jsx"
     ]
   },
@@ -20,9 +20,6 @@ const config = {
   },
   resolve: {
     extensions: ['.js', '.jsx'],
-    alias: {
-      'react-dom': '@hot-loader/react-dom',
-    },
   },
   module: {
     rules: [
@@ -36,15 +33,19 @@ const config = {
           // It enables caching results in ./node_modules/.cache/babel-loader/
           // directory for faster rebuilds.
           cacheDirectory: true,
-          plugins: ['react-hot-loader/babel'],
+          plugins: [
+            isDevMode && require.resolve('react-refresh/babel')
+          ].filter(Boolean),
         },
       }
     ],
   },
+  plugins: [
+    isDevMode && new ReactRefreshWebpackPlugin(),
+  ].filter(Boolean),
   devServer: {
     port: 8181,
     hot: true,
-    https: true,
     headers: { 'Access-Control-Allow-Origin': '*' },
     devMiddleware: {
       writeToDisk: true,

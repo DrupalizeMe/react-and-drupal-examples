@@ -20,6 +20,7 @@
 /drupal/web/sites/*/translations
 /drupal/web/sites/*/tmp
 /drupal/web/sites/*/cache
+/drupal/web/themes/react_example_theme/js/dist_dev
 
 # Ignore testing related files
 /drupal/web/sites/simpletest

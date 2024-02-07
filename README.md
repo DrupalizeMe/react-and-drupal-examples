@@ -1,12 +1,14 @@
-# Drupalize.Me React & Drupal 8 Code Examples
+# Drupalize.Me React & Drupal Code Examples
 
 This repo contains the example code used in the https://drupalize.me/series/drupal-8-and-reactjs series.
 
 **Note:** The `hello-world` branch contains a trimmed down version of the code that reflects the application as it would be after completing this tutorial covering how to [Connect React to a Drupal Theme or Module](https://drupalize.me/tutorial/connect-react-drupal-theme-or-module?p=3253).
 
-## Drupal 8
+## Drupal
 
-The /drupal directory contains a Drupal 8 project with basic configuration for JSON:API, and to demonstrate embedding a React application inside a Drupal theme or module.
+The /drupal directory contains a Drupal 10 project with basic configuration for JSON:API, and to demonstrate embedding a React application inside a Drupal theme or module.
+
+See the `drupal-9` branch for older examples including Drupal 8/9 and React 16.
 
 Install all the Drupal dependencies:
 
@@ -51,14 +53,14 @@ npm run start:hmr
 
 ## Decoupled React Application
 
-The _/react-decoupled_ directory contains an example decoupled React application built with create-react-app. It is built to interact with the API provided by Drupal 8 installed in _/drupal_.
+The _/react-decoupled_ directory contains an example decoupled React application built with create-react-app. It is built to interact with the API provided by Drupal installed in _/drupal_.
 
 To download dependencies and start the local development server run:
 
 ```bash
 cd react-decoupled
-yarn install
-yarn run start
+npm install
+npm run start
 ```
 
 You might need to update some configuration to make sure it points to your local Drupal installation.
