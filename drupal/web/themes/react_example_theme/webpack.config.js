@@ -51,10 +51,10 @@ const config = {
       writeToDisk: true,
     },
     // Settings for http-proxy-middleware.
-    proxy: {
-      '/': {
+    proxy: [
+      {
         index: '',
-        context: () => true,
+        context: ['/'],
         target: PROXY,
         publicPath: PUBLIC_PATH,
         secure: false,
@@ -64,7 +64,7 @@ const config = {
         changeOrigin: true,
         xfwd: true
       }
-    }
+    ]
   },
 };
 
