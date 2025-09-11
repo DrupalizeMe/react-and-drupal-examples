@@ -1,7 +1,5 @@
 import React, {useState} from "react";
-import { getAuthClient } from '../utils/auth';
-
-const auth = getAuthClient();
+import { fetchWithAuthentication } from "../utils/oauth";
 
 const NodeForm = ({id, title, body, onSuccess}) => {
   const [isSubmitting, setSubmitting] = useState(false);
@@ -61,7 +59,7 @@ const NodeForm = ({id, title, body, onSuccess}) => {
     };
 
     try {
-      auth.fetchWithAuthentication(fetchUrl, fetchOptions)
+      fetchWithAuthentication(fetchUrl, fetchOptions)
         .then((response) => response.json())
         .then((data) => {
           // We're done processing.

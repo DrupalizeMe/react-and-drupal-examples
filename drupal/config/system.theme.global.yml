@@ -1,3 +1,5 @@
+_core:
+  default_config_hash: KZiV2LB312xgJBphfq5BTjmp16xiR5KM8InBJ-pff7Y
 favicon:
   mimetype: image/vnd.microsoft.icon
   path: ''
@@ -10,7 +12,5 @@ features:
   node_user_picture: true
 logo:
   path: ''
-  url: ''
+  url: null
   use_default: true
-_core:
-  default_config_hash: 9rAU4Pku7eMBQxauQqAgjzlcicFZ2As6zEa6zvTlCB8

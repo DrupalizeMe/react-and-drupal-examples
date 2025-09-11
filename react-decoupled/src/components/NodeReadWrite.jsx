@@ -2,9 +2,7 @@ import React, { useEffect, useState } from "react";
 import NodeAdd from "./NodeAdd";
 import NodeEdit from "./NodeEdit";
 import NodeDelete from "./NodeDelete";
-import { getAuthClient } from "../utils/auth";
-
-const auth = getAuthClient();
+import { fetchWithAuthentication } from "../utils/oauth";
 
 /**
  * Helper function to validate data retrieved from JSON:API.
@@ -115,8 +113,6 @@ const NodeReadWrite = () => {
   const [filter, setFilter] = useState(null);
   const [showNodeAdd, setShowNodeAdd] = useState(false);
 
-  //auth.login('admin', 'admin');
-
   useEffect(() => {
     // This should point to your local Drupal instance. Alternatively, for React
     // applications embedded in a Drupal theme or module this could also be set
@@ -127,7 +123,7 @@ const NodeReadWrite = () => {
       Accept: 'application/vnd.api+json',
     });
 
-    auth.fetchWithAuthentication(url, {headers})
+    fetchWithAuthentication(url, {headers})
       .then((response) => response.json())
       .then((data) => {
         if (isValidData(data)) {

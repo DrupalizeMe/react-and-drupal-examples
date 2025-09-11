@@ -1,4 +1,4 @@
-uuid: d8a1c6c3-de49-436c-ac00-2faed745724d
+uuid: 6ac1853c-6e40-45cf-94fc-d33e58e334b8
 langcode: en
 status: true
 dependencies:
@@ -7,16 +7,16 @@ dependencies:
   theme:
     - react_example_theme
 _core:
-  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
 id: react_example_theme_help
 theme: react_example_theme
-region: content
-weight: -30
+region: sidebar_first
+weight: 0
 provider: null
 plugin: help_block
 settings:
   id: help_block
   label: Help
-  provider: help
   label_display: '0'
+  provider: help
 visibility: {  }

@@ -1,7 +1,5 @@
 import React from "react";
-import { getAuthClient } from '../utils/auth';
-
-const auth = getAuthClient();
+import { fetchWithAuthentication } from '../utils/oauth';
 
 const NodeDelete = ({ id, title, onSuccess }) => {
   function doConfirm() {
@@ -21,7 +19,7 @@ const NodeDelete = ({ id, title, onSuccess }) => {
     };
 
     try {
-      auth.fetchWithAuthentication(fetchUrl, fetchOptions)
+      fetchWithAuthentication(fetchUrl, fetchOptions)
         .then((response) => {
           // Should be 204. If so, call the onSuccess callback.
           if (response.status === 204) {

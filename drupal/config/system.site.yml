@@ -1,5 +1,8 @@
-uuid: f7bbf6b7-e904-47e4-9b02-1181491701cc
-name: react-tutorials
+_core:
+  default_config_hash: ijfbzDTN4CbE7Sr-6ubWzy_t1vH4OtU1doNCLssVz-4
+langcode: en
+uuid: 9323f5b7-2a4c-4429-9e7c-ded5a60bdadd
+name: 'Drush Site-Install'
 mail: admin@example.com
 slogan: ''
 page:
@@ -8,7 +11,5 @@ page:
   front: /node
 admin_compact_mode: false
 weight_select_max: 100
-langcode: en
 default_langcode: en
-_core:
-  default_config_hash: yTxtFqBHnEWxQswuWvkjE8mKw2t8oKuCL1q8KnfHuGE
+mail_notification: null

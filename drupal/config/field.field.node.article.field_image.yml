@@ -1,4 +1,4 @@
-uuid: cb2f912c-6ee5-4b73-9a60-4a46d9bbd101
+uuid: beec865e-6d50-4e59-8221-cd57f179f389
 langcode: en
 status: true
 dependencies:
@@ -8,7 +8,7 @@ dependencies:
   module:
     - image
 _core:
-  default_config_hash: tgJzhA7Swh4M_gWU5FwFe5lPxPj5rebpMbvhpdNrERs
+  default_config_hash: j0riO_-77ZFWNLtj0iJ31HnohiNjdn8HUL86RueCF-M
 id: node.article.field_image
 field_name: field_image
 entity_type: node
@@ -20,14 +20,16 @@ translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
+  handler: 'default:file'
+  handler_settings: {  }
   file_directory: '[date:custom:Y]-[date:custom:m]'
-  file_extensions: 'png gif jpg jpeg'
+  file_extensions: 'png gif jpg jpeg webp'
   max_filesize: ''
   max_resolution: ''
   min_resolution: ''
   alt_field: true
-  title_field: false
   alt_field_required: true
+  title_field: false
   title_field_required: false
   default_image:
     uuid: null
@@ -35,6 +37,4 @@ settings:
     title: ''
     width: null
     height: null
-  handler: 'default:file'
-  handler_settings: {  }
 field_type: image

@@ -1,0 +1,22 @@
+uuid: cdd21559-1592-472f-92f1-e98f299ebccd
+langcode: en
+status: true
+dependencies: {  }
+id: oauth
+name: oauth
+description: OAUTH
+grant_types:
+  authorization_code:
+    status: true
+    description: ''
+  refresh_token:
+    status: true
+    description: ''
+  client_credentials:
+    status: false
+    description: ''
+umbrella: false
+parent: _none
+granularity_id: role
+granularity_configuration:
+  role: oauth

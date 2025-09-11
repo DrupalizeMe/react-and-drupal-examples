@@ -1,4 +1,4 @@
-uuid: 88b5fdad-0656-4807-be91-1ebc4e9cd85d
+uuid: 66f166e7-0151-4a69-9229-93041cbbe6c4
 langcode: en
 status: true
 dependencies:
@@ -7,12 +7,15 @@ dependencies:
     - image
     - user
 _core:
-  default_config_hash: 6k-VBFilDLuzgSOT-77CFgHFlcd5D-kqRixtH89EShU
+  default_config_hash: 0q8-mw8y-Ls5I578sIPQFLp4ljpH7WvVYpzY-I9O-8E
 id: user.user_picture
 field_name: user_picture
 entity_type: user
 type: image
 settings:
+  target_type: file
+  display_field: false
+  display_default: false
   uri_scheme: public
   default_image:
     uuid: null
@@ -20,9 +23,6 @@ settings:
     title: ''
     width: null
     height: null
-  target_type: file
-  display_field: false
-  display_default: false
 module: image
 locked: false
 cardinality: 1

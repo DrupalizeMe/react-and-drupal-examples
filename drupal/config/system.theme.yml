@@ -1,4 +1,4 @@
-admin: seven
-default: react_example_theme
 _core:
-  default_config_hash: fOjer9hADYYnbCJVZMFZIIM1azTFWyg84ZkFDHfAbUg
+  default_config_hash: eJ529VM1gSIA_vgTy2PdiDvJuG0xhSxfQjCyl5WKlv4
+admin: claro
+default: react_example_theme

@@ -1,4 +1,4 @@
-uuid: f2532bc4-9ebe-4304-a4d0-dfdc73ff6a99
+uuid: c3a99074-8690-4b08-8f9e-ef2410b695d3
 langcode: en
 status: true
 dependencies:
@@ -7,16 +7,16 @@ dependencies:
   theme:
     - react_example_theme
 _core:
-  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+  default_config_hash: BZ5tpW7H8X4PVGRm3MImTIHd2tN0eF7zOtp4SpRYUA0
 id: react_example_theme_messages
 theme: react_example_theme
 region: highlighted
-weight: 0
+weight: -5
 provider: null
 plugin: system_messages_block
 settings:
   id: system_messages_block
   label: 'Status messages'
-  provider: system
   label_display: '0'
+  provider: system
 visibility: {  }

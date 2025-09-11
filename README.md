@@ -53,7 +53,19 @@ npm run start:hmr
 
 ## Decoupled React Application
 
-The _/react-decoupled_ directory contains an example decoupled React application built with create-react-app. It is built to interact with the API provided by Drupal installed in _/drupal_.
+The _/react-decoupled-vite_ directory contains an example decoupled React application built with Vite. It is built to interact with the API provided by Drupal installed in _/drupal_. This is the recommended approach.
+
+To download dependencies and start the local development server run:
+
+```bash
+cd react-decoupled-vite
+npm install
+npm run dev
+```
+
+You might need to update some configuration to make sure it points to your local Drupal installation. See _src/utils/oath.js_.
+
+For an older create-react-app based example see the _/react-decoupled_ directory which contains an example of a decoupled React application built with create-react-app.
 
 To download dependencies and start the local development server run:
 

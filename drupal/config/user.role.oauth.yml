@@ -1,15 +1,22 @@
-uuid: 0a102ad7-d88c-4a6c-b550-46db4187a7b6
+uuid: a1310fdb-71d2-4de5-b561-dab1b8c10e6b
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - node.type.article
+    - node.type.page
+  module:
+    - node
 id: oauth
 label: OAUTH
-weight: 3
+weight: 4
 is_admin: null
 permissions:
   - 'access content overview'
   - 'create article content'
-  - 'debug simple_oauth tokens'
+  - 'create page content'
   - 'delete any article content'
+  - 'delete any page content'
   - 'edit any article content'
+  - 'edit any page content'
   - 'view own unpublished content'

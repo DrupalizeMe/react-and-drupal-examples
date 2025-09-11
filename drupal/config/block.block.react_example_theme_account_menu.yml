@@ -1,4 +1,4 @@
-uuid: b092193a-8a92-481d-b6d5-9585ddf7f553
+uuid: 14a7a683-0a14-4e63-8a8a-f78bfbe6af3b
 langcode: en
 status: true
 dependencies:
@@ -9,18 +9,18 @@ dependencies:
   theme:
     - react_example_theme
 _core:
-  default_config_hash: 8a31Ywc1t2zlddGd3bmDrFMefWqgSK2E02ceFdr-bfc
+  default_config_hash: gmxYWWHmgbe0Pnv8y48ZLSLH5mEHejOjAP6RLxUfdzU
 id: react_example_theme_account_menu
 theme: react_example_theme
 region: secondary_menu
-weight: 0
+weight: -4
 provider: null
 plugin: 'system_menu_block:account'
 settings:
   id: 'system_menu_block:account'
   label: 'User account menu'
-  provider: system
   label_display: '0'
+  provider: system
   level: 1
   depth: 1
   expand_all_items: false

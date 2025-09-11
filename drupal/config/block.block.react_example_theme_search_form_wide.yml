@@ -1,0 +1,23 @@
+uuid: 4f6cf7aa-a1b5-40f5-8d71-64d1477e50c2
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - react_example_theme
+_core:
+  default_config_hash: imMyHD6LYci0gtXq56qr9ZKGHzbEG9uFydrN5EhKtSU
+id: react_example_theme_search_form_wide
+theme: react_example_theme
+region: secondary_menu
+weight: -5
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form (wide)'
+  label_display: '0'
+  provider: search
+  page_id: ''
+visibility: {  }
